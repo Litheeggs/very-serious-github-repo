@@ -67,4 +67,4 @@ There's no exact timeline because things may take longer or shorter and thats ok
 - Take breaks! get up, walk around and do something else
 - Play some of the other game jam games and give them a rating and/or helpful feedback
 - Reflect. What went well? What did you enjoy? What would you do differently next time?
-- AI? perferrably no. AI doesn't help your learning however nobodys going to be checking this, so you do you.
+- AI? perferrably no. AI doesn't help your learning however nobodys going to be checking this, so you do you...
