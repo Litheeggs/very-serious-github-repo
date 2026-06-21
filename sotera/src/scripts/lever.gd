@@ -13,10 +13,13 @@ var current_state: LeverState = LeverState.IDLE
 @export var min_pull_time : float = 0.5
 @export var max_pull_time : float = 2.5
 @export var pull_up_time : float = 1.0
+@export var e_prompt_ui : Sprite2D
 
 @onready var area : Area2D = $Area2D
 
+
 var can_interact : bool = false
+var current_player : CharacterBody2D = null
 
 #Signal to cleanly notify fortune wheel
 signal fortune_wheel_started
@@ -32,14 +35,26 @@ func _ready() -> void:
 	
 	area.body_entered.connect(_on_body_entered)
 	area.body_exited.connect(_on_body_exited)
+
+func _process(_delta: float) -> void:
+	if can_interact and current_player and e_prompt_ui:
+		var player_is_left = current_player.global_position.x < global_position.x
+		e_prompt_ui.on_player_in_sensor_area(true, player_is_left)	
 	
 func _on_body_entered(body: Node2D) -> void:
-		print("Player Entered")
 		can_interact = true
+		current_player = body
+		
+		if e_prompt_ui:
+			var player_is_left = body.global_position.x < global_position.x
+			e_prompt_ui.on_player_in_sensor_area(true,player_is_left)
 		
 func _on_body_exited(body:Node2D) -> void:
 		can_interact = false
-		print("Player Exited")
+		current_player = null
+		
+		if e_prompt_ui:
+			e_prompt_ui.on_player_in_sensor_area(false,false)
 	
 	
 
