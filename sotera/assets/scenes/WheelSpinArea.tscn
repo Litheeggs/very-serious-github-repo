@@ -22,7 +22,7 @@ texture = ExtResource("1_lmcl5")
 position = Vector2(948, 544)
 
 [node name="Player" parent="." unique_id=1229557920 instance=ExtResource("3_x8ifp")]
-position = Vector2(1578, 728)
+position = Vector2(1474, 803)
 
 [node name="worldboundary" type="Node2D" parent="." unique_id=1162189176]
 
@@ -61,3 +61,9 @@ script = ExtResource("4_kajl3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage-exit-area" unique_id=1553963211]
 position = Vector2(-40.875122, -22.556396)
 shape = SubResource("RectangleShape2D_3k25l")
+
+[node name="DisplayControls" type="RichTextLabel" parent="stage-exit-area" unique_id=1089995010]
+offset_left = -178.37512
+offset_top = -213.0564
+offset_right = 96.62488
+offset_bottom = -100.0564
