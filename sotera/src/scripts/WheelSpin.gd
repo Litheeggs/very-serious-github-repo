@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		pass
 
 	var single_value_height_in_texture = 1.0 / items.size();
-	var value_idx = (int(offset / single_value_height_in_texture) + 3) % items.size();
+	var value_idx = (int(offset / single_value_height_in_texture) + (items.size()/2)) % items.size();
 
 	$WheelTexture.material.set_shader_parameter("offset", offset);
 	$WheelTexture.material.set_shader_parameter("number_of_values", items.size());
