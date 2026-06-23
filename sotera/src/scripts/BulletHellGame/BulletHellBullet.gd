@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		position+= transform.x*speed*delta
 
 func shoot(mousePos:Vector2)->void:
-	$Sprite.show()
+	$ColorRect.show()
 	look_at(mousePos)
 	state = BULLETSTATE.SHOOTING
 	$Lifetime.start(lifetime)
@@ -33,7 +33,7 @@ func disable()->void:
 	position = Vector2.ZERO
 	if !$Lifetime.is_stopped():
 		$Lifetime.stop()
-	$Sprite.hide()
+	$ColorRect.hide()
 
 
 func _on_hit_area_entered(body: Node2D) -> void:

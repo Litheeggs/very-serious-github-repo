@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dw68jd0covayh"]
 
 [ext_resource type="Script" uid="uid://bi4mbn4hovhsg" path="res://src/scripts/BulletHellGame/BulletHellBullet.gd" id="1_eswpn"]
-[ext_resource type="Texture2D" uid="uid://ch5qgxqjmwbc5" path="res://assets/images/Arrow 1.png" id="2_khnji"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u2d4l"]
 
@@ -14,10 +13,13 @@ damage = 5.0
 [node name="Lifetime" type="Timer" parent="." unique_id=1076852760]
 one_shot = true
 
-[node name="Sprite" type="Sprite2D" parent="." unique_id=747229242]
-position = Vector2(-4.7683716e-07, 0)
-scale = Vector2(0.6142857, 1)
-texture = ExtResource("2_khnji")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=407229271]
+visible = false
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 9.0
+color = Color(0.47058824, 0, 1, 1)
 
 [node name="HitArea" type="Area2D" parent="." unique_id=1021852837]
 z_index = 1
