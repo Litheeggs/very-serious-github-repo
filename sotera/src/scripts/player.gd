@@ -36,16 +36,13 @@ func movement_animation():
 	elif velocity.x < 0:
 		$Animations.play("leftrun")
 
-func _physics_process(delta):
-
+func _physics_process(_delta):
 	player_movement()
 	
-	#player animations
 	if velocity == Vector2.ZERO:
 		idle_animation()
 		if dust_vfx:
 			dust_vfx._on_player_stop_moving()
-
 	else:
 		movement_animation()
 		if dust_vfx:
