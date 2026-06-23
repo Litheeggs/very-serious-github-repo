@@ -1,8 +1,13 @@
 extends CharacterBody2D
+class_name BulletHellCharacter
 
 @export var speed = 500
 @export var gun:BulletHellGun
+@export var iFrames:int
+@export var maxHp:int
 
+@onready var hp = maxHp
+var currentiFrames = 0
 var mousePos
 var theta = 0
 var firing = false
@@ -64,6 +69,8 @@ func movement_animation():
 			$Animations.play("leftrun")
 
 func _physics_process(delta):
+	if currentiFrames>0:
+		currentiFrames -= 1
 	mousePos = get_global_mouse_position()
 	theta = get_angle_to(mousePos)
 	if firing:
@@ -87,3 +94,15 @@ func _on_animations_frame_changed():
 			
 	else:
 		$Footsteps.stop()
+		
+func takeDamage(damage:int)->void:
+	
+	if currentiFrames<=0:
+		currentiFrames = iFrames
+		hp-=damage
+		
+	if hp<=0:
+		#Minigame over
+		print("Player Dead")
+		takeDamage(0)#crashing the game on death for funsies	
+	

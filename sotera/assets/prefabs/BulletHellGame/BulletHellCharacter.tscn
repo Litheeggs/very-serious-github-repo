@@ -6,7 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://n7rvjv4now1c" path="res://assets/audio/sfx/joentnt-walk-on-grass-1-291984.mp3" id="4_0fflw"]
 [ext_resource type="PackedScene" uid="uid://dkn2kpahpr8ds" path="res://assets/prefabs/BulletHellGame/BulletHellGun.tscn" id="5_3fn2k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2d4l"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_mouw8"]
+radius = 21.213203
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0gfpk"]
 atlas = ExtResource("2_va1f7")
@@ -622,12 +623,22 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u2d4l"]
+radius = 21.0
+height = 90.0
+
 [node name="BulletHellCharacter" type="CharacterBody2D" unique_id=770224643 node_paths=PackedStringArray("gun")]
+z_index = 2
+y_sort_enabled = true
 script = ExtResource("1_2bc3i")
 gun = NodePath("BulletHellGun")
+iFrames = 60
+maxHp = 20
 
-[node name="Hurtbox" type="CollisionShape2D" parent="." unique_id=1411666399]
-shape = SubResource("RectangleShape2D_u2d4l")
+[node name="WalkBox" type="CollisionShape2D" parent="." unique_id=1411666399]
+z_index = 1
+position = Vector2(-2, 17)
+shape = SubResource("CircleShape2D_mouw8")
 
 [node name="Animations" type="AnimatedSprite2D" parent="." unique_id=1648659667]
 scale = Vector2(5, 5)
@@ -639,3 +650,9 @@ frame_progress = 0.91807985
 stream = ExtResource("4_0fflw")
 
 [node name="BulletHellGun" parent="." unique_id=554639469 instance=ExtResource("5_3fn2k")]
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=301136808]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1102205982]
+position = Vector2(-2, -7)
+shape = SubResource("CapsuleShape2D_u2d4l")

@@ -3,6 +3,7 @@ class_name BulletHellBullet
 
 @export var lifetime:float
 @export var speed:float
+@export var damage:float
 
 
 var state:BULLETSTATE = BULLETSTATE.DISABLED
@@ -30,11 +31,16 @@ func shoot(mousePos:Vector2)->void:
 func disable()->void:
 	state = BULLETSTATE.DISABLED
 	position = Vector2.ZERO
+	if !$Lifetime.is_stopped():
+		$Lifetime.stop()
 	$Sprite.hide()
 
 
 func _on_hit_area_entered(body: Node2D) -> void:
-	if body.is_in_group("BulletHellEnemy"):
-		#Do enemy hurt
-		disable()
-		pass
+	if state!=BULLETSTATE.DISABLED:
+		if body is BulletHellEnemy:
+			if !body.isDisabled():
+				body.takeDamage(damage)
+				disable()
+		elif body.is_in_group("Background"):
+			disable()
