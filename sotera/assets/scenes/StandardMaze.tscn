@@ -186,10 +186,10 @@ position = Vector2(1549, 589)
 [node name="Player" parent="." unique_id=1229557920 instance=ExtResource("1_v6fnw")]
 position = Vector2(956, 563)
 
-[node name="Following_Cam" type="Camera2D" parent="Player" unique_id=736116616 node_paths=PackedStringArray("target")]
-script = ExtResource("5_gveds")
-target = NodePath("..")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1126292774]
 
-[node name="Overlays" type="CanvasLayer" parent="." unique_id=2125382469]
-
-[node name="CRT" parent="Overlays" unique_id=719073563 instance=ExtResource("2_olgeh")]
+[node name="CRT" parent="CanvasLayer" unique_id=719073563 instance=ExtResource("2_olgeh")]
+offset_left = 24.0
+offset_top = -3.0
+offset_right = 1941.0
+offset_bottom = 1087.0

@@ -2,6 +2,7 @@
 
 [ext_resource type="SpineSkeletonDataResource" uid="uid://p4eyb2480adc" path="res://assets/animations/2d/jumpscare/Jumpscare.tres" id="1_akneb"]
 [ext_resource type="Script" uid="uid://c2m8gx3srbcwj" path="res://src/scripts/jumpscare/JumpScareController.gd" id="2_5ipo6"]
+[ext_resource type="AudioStream" uid="uid://besi2kswy0dj0" path="res://assets/audio/Jumpscare 2 (shava).wav" id="3_x387y"]
 
 [node name="Root" type="SpineSprite" unique_id=1559867996]
 skeleton_data_res = ExtResource("1_akneb")
@@ -10,3 +11,9 @@ preview_animation = "Jump"
 preview_frame = false
 preview_time = 0.0
 script = ExtResource("2_5ipo6")
+
+[node name="Voice" type="AudioStreamPlayer2D" parent="." unique_id=1852497286]
+show_behind_parent = true
+position = Vector2(476, 514)
+stream = ExtResource("3_x387y")
+volume_db = 24.0

@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Events="*uid://dnb2gar5rl7x3"
+Events="*uid://dpv8uw8ip271l"
 
 [display]
 
@@ -32,7 +32,7 @@ enabled=PackedStringArray()
 
 [gui]
 
-theme/custom_font="uid://4ct702o11jjv"
+theme/custom_font="uid://cwbt4fgf27yh7"
 
 [input]
 

@@ -7,10 +7,11 @@ var crt_motion: CrtMotion
 
 
 func _ready() -> void:
+	crt_motion = CrtMotion.new($ColorRect)
+	adjust_to_full_screen()
+	
 	Events.level_change_start.connect(fade_out)
 	Events.level_change_enter.connect(fade_in)
-	adjust_to_full_screen()
-	crt_motion = CrtMotion.new($ColorRect)
 	
 func _process(delta: float) -> void:
 	crt_motion.update(delta)
