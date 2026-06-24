@@ -41,7 +41,6 @@ text = "EXIT
 "
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_lock_ = true
 
 [node name="Title" type="Label" parent="." unique_id=507629899]
 layout_mode = 0
@@ -53,7 +52,6 @@ pivot_offset = Vector2(263, 185)
 theme_override_font_sizes/font_size = 280
 text = "SOTERA"
 text_overrun_behavior = 1
-metadata/_edit_lock_ = true
 
 [node name="Play" type="ColorRect" parent="." unique_id=1097624220 node_paths=PackedStringArray("crt", "curtain_system", "jump_scare")]
 layout_mode = 0
@@ -77,15 +75,9 @@ theme_override_font_sizes/font_size = 94
 text = "WELCOME"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_lock_ = true
 
 [node name="JumpScare" parent="." unique_id=1559867996 instance=ExtResource("5_k62dj")]
 visible = false
 position = Vector2(885, 1122)
 
 [node name="CRT" parent="." unique_id=719073563 instance=ExtResource("3_2jmyb")]
-layout_mode = 1
-offset_left = 7.0
-offset_top = 12.0
-offset_right = 7.0
-offset_bottom = 12.0
