@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://qxxqamx1koeu" path="res://assets/prefabs/ui/CRT.tscn" id="2_olgeh"]
 [ext_resource type="PackedScene" uid="uid://urcx0ou3hqip" path="res://assets/prefabs/contract.tscn" id="3_alw0s"]
 [ext_resource type="PackedScene" uid="uid://bl3aub37omva4" path="res://assets/prefabs/pixel_scaler.tscn" id="4_o565x"]
-[ext_resource type="Script" uid="uid://cmsjbbsvqyg4n" path="res://src/scripts/maze/following_cam.gd" id="5_gveds"]
 [ext_resource type="Texture2D" uid="uid://wn1oanhk2b2y" path="res://assets/raw/maze/standard_maze_tileset-Terrain.png" id="5_o565x"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_o565x"]
@@ -192,3 +191,5 @@ position = Vector2(1549, 589)
 
 [node name="Player" parent="." unique_id=1229557920 instance=ExtResource("1_v6fnw")]
 position = Vector2(956, 563)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=26781501]
