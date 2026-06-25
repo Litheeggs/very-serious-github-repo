@@ -3,5 +3,9 @@
 /android/
 .nomedia
 
+# output folder for export
+/out/
+out/
+
 # System and IDE overrides
 .DS_Store

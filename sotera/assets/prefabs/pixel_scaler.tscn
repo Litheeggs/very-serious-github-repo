@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bl3aub37omva4"]
+
+[node name="Pixel_Scaler" type="Node2D" unique_id=443437695]
+scale = Vector2(10, 10)
