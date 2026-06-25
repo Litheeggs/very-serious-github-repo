@@ -184,8 +184,7 @@ position = Vector2(1549, 589)
 [node name="Player" parent="." unique_id=1229557920 instance=ExtResource("1_v6fnw")]
 position = Vector2(956, 563)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1057122271]
-position = Vector2(0, 2)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=26781501]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1126292774]
 
