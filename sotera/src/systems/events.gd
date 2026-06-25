@@ -6,6 +6,9 @@ signal fade_out_done
 signal fade_in_done
 signal game_over
 
+var contract_standardMaze=false
+var total_contract=0
+
 var target_scene = ""
 
 func _ready() -> void:
