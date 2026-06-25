@@ -85,6 +85,6 @@ position = Vector2(1462, 796)
 position = Vector2(1812, 814)
 
 [node name="Curtains" type="Sprite2D" parent="." unique_id=965856818]
-position = Vector2(956, 544)
-scale = Vector2(5.972222, 5.972222)
+position = Vector2(960.00006, 544)
+scale = Vector2(6, 6)
 texture = ExtResource("7_4fco3")
