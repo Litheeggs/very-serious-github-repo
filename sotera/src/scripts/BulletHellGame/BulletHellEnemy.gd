@@ -89,6 +89,7 @@ func spawn(spawnPos:Vector2,player:BulletHellCharacter)->void:
 	
 func takeDamage(damageToTake:int)->void:
 	hp-=damageToTake
+	SoundPool.play_random_shuffled_sound(SoundPool.ZOMBIE_GROWL)
 	if hp<=0:
 		destroy()
 	pass
@@ -109,6 +110,7 @@ func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 		if state == BHENEMYSTATE.MOVING:
 			state = BHENEMYSTATE.ATTACKING
 			damagingPlayer = true
+			SoundPool.play_sound(SoundPool.ZOMBIE_BITE)
 
 
 func _on_attack_hitbox_body_exited(body: Node2D) -> void:

@@ -296,7 +296,7 @@ position = Vector2(0, 20.999998)
 scale = Vector2(10, 10)
 shape = SubResource("CapsuleShape2D_5wjao")
 
-[node name="Dust2" parent="." unique_id=1235389923 instance=ExtResource("5_hdmdu")]
+[node name="Dust2" parent="." unique_id=1354126433 instance=ExtResource("5_hdmdu")]
 position = Vector2(5, 92)
 
 [connection signal="frame_changed" from="Animations" to="." method="_on_animations_frame_changed"]

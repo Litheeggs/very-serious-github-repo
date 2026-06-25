@@ -11,6 +11,8 @@ func _ready() -> void:
 	body_exited.connect(_on_body_exited)
 	# Ensure's keybind label isn't visible at start of scene.
 	label.visible = false
+	MusicPlayer.play_track(MusicPlayer.INTRO, 0.1, 0.0, -5.8)
+
 
 func _on_body_entered(_body: Node2D):
 	player_in_area = true
@@ -31,3 +33,4 @@ func _process(_delta):
 	#if requirements are met, change scene.
 	if player_in_area and Input.is_action_just_pressed("interact"):
 		Events.change_level("res://assets/scenes/StandardMaze.tscn")
+		MusicPlayer.stop_track(2.0)
