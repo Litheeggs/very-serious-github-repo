@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://bcnlbtdiicag" path="res://assets/prefabs/gui.tscn" id="1_8cy1c"]
 [ext_resource type="Texture2D" uid="uid://n3ucyq26j0qu" path="res://assets/raw/wheel-scene/stage.png" id="1_cooqm"]
 [ext_resource type="PackedScene" uid="uid://hubowr5basua" path="res://assets/prefabs/Wheel.tscn" id="2_4arlo"]
-[ext_resource type="PackedScene" uid="uid://b830mwodbpleq" path="res://assets/prefabs/player.tscn" id="3_cooqm"]
 [ext_resource type="PackedScene" uid="uid://m03c8gghqx32" path="res://assets/prefabs/Steven.tscn" id="4_4fco3"]
 [ext_resource type="Script" uid="uid://cee05bf1k1vhv" path="res://src/scripts/stage_exit_area.gd" id="5_8cy1c"]
 [ext_resource type="PackedScene" uid="uid://qxxqamx1koeu" path="res://assets/prefabs/ui/CRT.tscn" id="6_4arlo"]
 [ext_resource type="Texture2D" uid="uid://scsxnpxytqir" path="res://assets/raw/wheel-scene/curtains.png" id="7_4fco3"]
 [ext_resource type="PackedScene" uid="uid://ctimv56j7qqjo" path="res://assets/prefabs/lever.tscn" id="7_cooqm"]
+[ext_resource type="PackedScene" uid="uid://c7kga4lmflwpr" path="res://assets/prefabs/ui/stage_player.tscn" id="9_8cy1c"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t6tgv"]
 distance = 3.9999962
@@ -17,6 +17,7 @@ distance = 3.9999962
 size = Vector2(1920.5, 199.5)
 
 [node name="Root" type="Node2D" unique_id=953526698]
+y_sort_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=619906068]
 
@@ -82,12 +83,13 @@ offset_bottom = -100.0564
 position = Vector2(-1372.3751, -84.0564)
 
 [node name="Lever" parent="." unique_id=1796701312 instance=ExtResource("7_cooqm")]
-position = Vector2(1462, 796)
+position = Vector2(1472, 840)
 
-[node name="Player" parent="." unique_id=1229557920 instance=ExtResource("3_cooqm")]
-position = Vector2(1812, 814)
+[node name="StagePlayer" parent="." unique_id=143653979 instance=ExtResource("9_8cy1c")]
+position = Vector2(1655.9999, 959.99994)
 
 [node name="Curtains" type="Sprite2D" parent="." unique_id=965856818]
+z_index = 1
 position = Vector2(960.00006, 544)
 scale = Vector2(6, 6)
 texture = ExtResource("7_4fco3")
