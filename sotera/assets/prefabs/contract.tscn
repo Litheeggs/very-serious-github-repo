@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://q2k4r45hnd4v" path="res://assets/raw/maze/contract.png" id="2_8dy72"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3k25l"]
-radius = 136.03308
+radius = 264.0
 
 [node name="Contract" type="Node2D" unique_id=2146452445]
 script = ExtResource("1_liqsi")
@@ -19,5 +19,15 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2128186504]
 shape = SubResource("CircleShape2D_3k25l")
 
+[node name="Button" type="Button" parent="." unique_id=255000873]
+visible = false
+offset_left = -150.0
+offset_top = -350.0
+offset_right = 160.0
+offset_bottom = -300.0
+theme_override_font_sizes/font_size = 40
+text = "pick up contract"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

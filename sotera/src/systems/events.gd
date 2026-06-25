@@ -6,6 +6,9 @@ signal fade_out_done
 signal fade_in_done
 signal game_over
 
+signal collect_contract
+signal loose_life
+
 var target_scene = ""
 
 func _ready() -> void:
