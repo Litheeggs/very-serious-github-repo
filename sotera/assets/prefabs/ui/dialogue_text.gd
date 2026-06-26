@@ -111,5 +111,6 @@ func start_next_dialog():
 		var dialogs = load("res://assets/narrative/dialogue/Scene_intro.tres")
 		on_start_dialogue(dialogs, 100)
 	elif Globals.Total_contracts == 1:
-		# plays has completed first mini-game
+		# plays after first completed first mini-game
 		pass
+	#elif Globals.Total_contracts == 2:
